@@ -30,16 +30,16 @@ body.locked {
   position: relative;
 }
 
-.content-img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
+.content-img{
+width:100%;
+height:auto;
+display:block;
 }
 
 .envelope-click {
   position: absolute;
-  width: 220px; 
-  height: 140px;  
+  width: 45px; 
+  height: 20px;  
   top: 55%;      
   left: 50%;
   transform: translate(-50%, -50%);
@@ -83,30 +83,25 @@ body.locked {
   position: relative;
 }
 
-.timer {
-  position: absolute;
-  top: 43%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  gap: 135px;
+.timer{
+position:absolute;
+top:43%;
+left:50%;
+transform:translate(-50%,-50%);
 
-  font-size: 60px;
-  font-weight: 600;
-  font-family: "Playfair Display", serif;
+display:flex;
+justify-content:center;
+gap:8vw;
 
-  color: #f5d6a1;
+font-size:8vw;
 
-  text-shadow:
-    0 0 6px rgba(245,214,161,0.8),
-    0 0 12px rgba(245,214,161,0.6),
-    0 0 20px rgba(245,214,161,0.4);
+font-weight:600;
+font-family:"Playfair Display", serif;
 
-  animation: timerGlow 2.5s ease-in-out infinite alternate;
+color:#f5d6a1;
 
-  width: 100%;
-  max-width: 600px;
-  justify-content: center;
+width:100%;
+max-width:600px;
 }
 
 #countdown {
@@ -138,15 +133,14 @@ body.locked {
   position: relative;
 }
 
-.rsvp-click {
-  position: absolute;
-  width: 180px;
-  height: 40px;
-  bottom: 6%;
-  left: 37%;
-  transform: translateX(-50%);
-  z-index: 10;
-  cursor: pointer;
+.rsvp-click{
+position:absolute;
+width:40%;
+height:7%;
+bottom:6%;
+left:50%;
+transform:translateX(-50%);
+cursor:pointer;
 }
 
 /* SPARKLES BACKGROUND */
@@ -433,3 +427,31 @@ opacity:0;
 
 }
 
+/* DESKTOP FRIENDLY LAYOUT */
+
+body{
+max-width:520px;
+margin:auto;
+background:black;
+}
+
+/* DESKTOP IMPROVEMENTS */
+
+@media (min-width:768px){
+
+.section{
+padding:40px 0;
+}
+
+.timer{
+font-size:50px;
+gap:80px;
+}
+
+}
+
+.envelope-click,
+.location-click,
+.rsvp-click{
+cursor:pointer;
+}
