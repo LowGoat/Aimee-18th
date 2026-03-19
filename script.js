@@ -5,20 +5,28 @@ const music = document.getElementById("bgMusic");
 envelope.addEventListener("click", function () {
   envelope.classList.add("open");
   createConfetti();
+  music.play();
 
-  music.play(); // 🎵 start music when envelope opens
+  document.querySelectorAll(".reveal").forEach(section => {
+    section.classList.add("ready");
+  });
 
   setTimeout(() => {
     document.body.classList.remove("locked");
-    document.querySelector(".reveal").scrollIntoView({
+
+    const firstReveal = document.querySelector(".reveal");
+    firstReveal.classList.add("active");
+    firstReveal.scrollIntoView({
       behavior: "smooth"
     });
+
+    revealOnScroll();
   }, 600);
 });
 
 // Scroll Reveal
 function revealOnScroll() {
-  const reveals = document.querySelectorAll(".reveal");
+  const reveals = document.querySelectorAll(".reveal.ready");
 
   reveals.forEach(section => {
     const windowHeight = window.innerHeight;
