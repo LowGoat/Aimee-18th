@@ -9,28 +9,11 @@ envelope.addEventListener("click", function () {
 
   setTimeout(() => {
     document.body.classList.remove("locked");
-    document.querySelector(".reveal").scrollIntoView({
+    document.querySelectorAll(".section")[1].scrollIntoView({
       behavior: "smooth"
     });
   }, 600);
 });
-
-// Scroll Reveal
-function revealOnScroll() {
-  const reveals = document.querySelectorAll(".reveal.ready");
-
-  reveals.forEach(section => {
-    const windowHeight = window.innerHeight;
-    const elementTop = section.getBoundingClientRect().top;
-
-    if (elementTop < windowHeight - 100) {
-      section.classList.add("active");
-    }
-  });
-}
-
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
 
 // COUNTDOWN TIMER
 const daysEl = document.getElementById("days");
