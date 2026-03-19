@@ -45,17 +45,6 @@ cursor:pointer;
 .reveal {
   opacity: 1;
   transform: none;
-  transition: all 1.2s cubic-bezier(.22,.61,.36,1);
-}
-
-.reveal.ready {
-  opacity: 0;
-  transform: translateY(60px) scale(0.98);
-}
-
-.reveal.ready.active {
-  opacity: 1;
-  transform: translateY(0) scale(1);
 }
 
 .countdown-box {
