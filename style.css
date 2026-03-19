@@ -427,3 +427,14 @@ z-index:1;
 /* keep your animation */
 transition: transform 0.6s ease, filter 0.6s ease;
 }
+
+.content-img{
+pointer-events: none;
+}
+
+.envelope-click,
+.rsvp-click,
+.location-click,
+.timer{
+z-index: 5;
+}
