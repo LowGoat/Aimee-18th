@@ -7,20 +7,11 @@ envelope.addEventListener("click", function () {
   createConfetti();
   music.play();
 
-  document.querySelectorAll(".reveal").forEach(section => {
-    section.classList.add("ready");
-  });
-
   setTimeout(() => {
     document.body.classList.remove("locked");
-
-    const firstReveal = document.querySelector(".reveal");
-    firstReveal.classList.add("active");
-    firstReveal.scrollIntoView({
+    document.querySelector(".reveal").scrollIntoView({
       behavior: "smooth"
     });
-
-    revealOnScroll();
   }, 600);
 });
 
