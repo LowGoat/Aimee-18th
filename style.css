@@ -1,3 +1,10 @@
+.envelope-click,
+.rsvp-click,
+.location-click,
+.timer{
+z-index: 5;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +17,8 @@ body.locked {
 
 .section {
   width: 100%;
-  height: 100dvh;
+  height: 100svh;
+  scroll-snap-align: start;
   position: relative;
   overflow: hidden;
   display: block;
@@ -202,11 +210,6 @@ html {
   z-index: 1;
 }
 
-.section:hover .content-img {
-  transform: scale(1.02);
-  filter: brightness(1.05);
-}
-
 body {
   animation: pageFade 1.5s ease;
 }
@@ -394,22 +397,22 @@ html, body {
 
 .content-img{
   position:absolute;
-  top:0;
-  left:0;
+  top:50%;
+  left:50%;
   width:100%;
   height:100%;
   object-fit:cover;
+  transform:translate(-50%, -50%) scale(1.12);
   z-index:1;
   pointer-events:none;
 }
 
-.envelope-click,
-.rsvp-click,
-.location-click,
-.timer{
-z-index: 5;
-}
-
 body {
   overflow-x: hidden;
+  overflow-y: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
