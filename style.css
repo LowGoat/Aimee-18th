@@ -65,7 +65,7 @@ transform:translate(-50%,-50%);
 
 display:flex;
 justify-content:center;
-gap:12vw;
+gap:14vw;
 
 font-size:8vw;
 
@@ -100,7 +100,7 @@ max-width:600px;
   position: absolute;
   width: 270px;
   height: 100px;
-  top: 58%;      
+  top: 64%;      
   left: 50%;
   transform: translateX(-50%);
 }
