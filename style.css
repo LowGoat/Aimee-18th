@@ -59,13 +59,13 @@ cursor:pointer;
 
 .timer{
 position:absolute;
-top:45%;
+top:43%;
 left:50%;
 transform:translate(-50%,-50%);
 
 display:flex;
 justify-content:center;
-gap:14vw;
+gap:16vw;
 
 font-size:8vw;
 
@@ -100,7 +100,7 @@ max-width:600px;
   position: absolute;
   width: 270px;
   height: 100px;
-  top: 64%;      
+  top: 70%;      
   left: 50%;
   transform: translateX(-50%);
 }
